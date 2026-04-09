@@ -1,0 +1,347 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <link rel="stylesheet" href="{% static 'css/port.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <h3 class="navbar-brand ms-5">Nitika Swami</h3>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ms-auto me-5">
+        <a class="nav-link nav-color" href="#">Home</a>
+        <a class="nav-link nav-color" href="#about">About</a>
+        <a class="nav-link nav-color" href="#project">Project</a>
+        <a class="nav-link nav-color" href="#skill">Skill</a>
+        <a class="nav-link nav-color" href="#contact">Contact</a>
+        <button onclick="toggleDark()" class="btn ms-3">
+          <i id="darkIcon" class="fas fa-moon"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO SECTION -->
+<div class="hero-section position-relative">
+
+  <!-- <img src="rightside.png" class="hero-img" alt="image"> -->
+  <img src="{% static 'image/rightside.png' %}"  class="hero-img" alt="project">
+
+  <div class="hero-text position-absolute top-50 start-0 translate-middle-y p-5 ms-5">
+    <h1 class="fw-bold">Hi I'm Nitika</h1>
+    <h5 class="text-secondary">Full Stack Web Developer</h5>
+    <p class="text-secondary fw-light">
+      Full-stack developer passionate about building modern, responsive web apps. 
+      <br>
+       Always learning, always improving.
+    </p>
+    <a href="{% static 'resume/nitika_resume.png' %}" download class="btn-orange">
+      Hire Me
+    </a>
+  </div>
+
+</div>
+
+<!-- ABOUT SECTION -->
+<div id="about" class="container about-section text-center">
+
+  <!-- Heading -->
+  <h2 class="fw-bold mb-3">About Me</h2>
+  <p class="text-secondary mb-5">
+    I am a dedicated full stack developer skilled in HTML, CSS, JavaScript, Python and Django.
+  </p>
+
+  <!-- Cards -->
+  <div class="row justify-content-center g-4">
+
+    <!-- Card 1 -->
+    <div class="col-md-4">
+      <div class="about-card">
+        <div class="icon">📄</div>
+        <h5>6 Months Training</h5>
+        <p>Intensive training in modern web development</p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-md-4">
+      <div class="about-card">
+        <div class="icon">💻</div>
+        <h5>Clean Coding</h5>
+        <p>Focused on writing maintainable code</p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-md-4">
+      <div class="about-card">
+        <div class="icon">⚙️</div>
+        <h5>Modern Projects</h5>
+        <p>Hands-on experience with latest tech</p>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<div id="project" class="container project-section my-5 text-center">
+
+  <!-- Heading -->
+  <h2 class="fw-bold mb-3">My Projects</h2>
+  <p class="text-secondary mb-5">
+    Here are some of my recent works
+  </p>
+
+  <!-- Cards -->
+  <div class="row g-4">
+
+    <!-- Project 1 -->
+    <div class="col-md-4">
+      <div class="project-card">
+        <!-- <img src="phtot3.avif" alt="project"> -->
+        <img src="{% static 'image/phtot3.avif' %}" alt="project">
+        <div class="project-content">
+          <h5>Portfolio Website</h5>
+          <p>Personal portfolio built using HTML, CSS & Bootstrap</p>
+          <a href="#" class="btn-orange">View Project</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="col-md-4">
+      <div class="project-card">
+        <!-- <img src="phtot2.avif" alt="project"> -->
+        <img src="{% static 'image/phtot2.avif' %}" alt="project">
+        <div class="project-content">
+          <h5>E-commerce Website</h5>
+          <p>Online store with modern UI and product features</p>
+          <a href="#" class="btn-orange">View Project</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="col-md-4">
+      <div class="project-card">
+        <!-- <img src="photo1.avif" alt="Blog"> -->
+        <img src="{% static 'image/photo1.avif' %}" alt="project">
+        <div class="project-content">
+          <h5>Blog Website</h5>
+          <p>Dynamic blog platform using Django backend</p>
+          <a href="#" class="btn-orange">View Project</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- SKILLS SECTION -->
+<div id="skill" class="container skills-section text-center my-5">
+  <h2 class="fw-bold mb-3">My Skills</h2>
+  <p class="text-secondary mb-5">
+    Technologies I work with
+  </p>
+
+  <div class="row justify-content-center g-4">
+
+    <!-- Skill 1: HTML -->
+    <div class="col-6 col-md-2">
+      <div class="skill-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="HTML" class="skill-img">
+        <h6 class="mt-2">HTML</h6>
+      </div>
+    </div>
+
+    <!-- Skill 2: CSS -->
+    <div class="col-6 col-md-2">
+      <div class="skill-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSS" class="skill-img">
+        <h6 class="mt-2">CSS</h6>
+      </div>
+    </div>
+
+   <!-- skill 3: bootstrap -->
+    <div class="col-6 col-md-2">
+      <div class="skill-card">
+       <img src="https://cdn-icons-png.flaticon.com/512/5968/5968672.png" alt="Bootstrap" class="skill-img ">
+      <h6 class="mt-2">Bootstrap</h6>
+      </div>
+    </div>
+
+    <!-- Skill 3: JavaScript -->
+    <div class="col-6 col-md-2">
+      <div class="skill-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JavaScript" class="skill-img">
+        <h6 class="mt-2">JavaScript</h6>
+      </div>
+    </div>
+
+    <!-- Skill 4: Python -->
+    <div class="col-6 col-md-2">
+      <div class="skill-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" alt="Python" class="skill-img">
+        <h6 class="mt-2">Python</h6>
+      </div>
+    </div>
+
+    <!-- Skill 5: Django -->
+    <div class="col-6 col-md-2">
+      <div class="skill-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/919/919837.png" alt="Django" class="skill-img">
+        <h6 class="mt-2">Django</h6>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- CONTACT SECTION -->
+<div id="contact" class="container contact-section my-5">
+  <h2 class="fw-bold text-center mb-4">Contact Me</h2>
+  <p class="text-secondary text-center mb-5">Get in touch with me for projects or queries</p>
+
+  <div class="row g-4">
+
+    <!-- Left Side: Contact Info -->
+    <div class="col-md-5">
+      <div class="contact-info p-4  rounded-4 shadow h-100">
+        <h4 class="fw-bold mb-2">Let's Connect</h4>
+        <p class="text-secondary mb-4">
+          I'm always open for collaboration. Reach out and let's create something amazing together!
+        </p>
+
+        <!-- Email -->
+        <h5 class="mb-2"><i class="fas fa-envelope me-2 text-warning"></i>Email</h5>
+        <p>connect@nitikaswami85.com</p>
+
+        <!-- Phone -->
+        <h5 class="mb-2"><i class="fas fa-phone me-2 text-warning"></i>Call Us</h5>
+        <p>+91 8699200185</p>
+
+        <!-- Address -->
+        <h5 class="mb-2"><i class="fas fa-map-marker-alt me-2 text-warning"></i>Address</h5>
+        <p>Chandigarh, Mohali, Sector 71, Sahibzada Ajit Singh Nagar, Punjab 140307 , 3238</p>
+      </div>
+    </div>
+
+    <!-- Right Side: Contact Form -->
+    <div class="col-md-7">
+      <div class="contact-form p-4  rounded-4 shadow">
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label">Your Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Your Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" rows="5" placeholder="Your message"></textarea>
+          </div>
+          <button type="submit" class="btn btn-orange">Send Message</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer-section bg-dark text-white py-4">
+  <div class="container text-center">
+
+    <!-- Social Links -->
+    <div class="mb-3">
+      <a href="https://www.linkedin.com/in/nitika-swami-484654400?utm_source=share_via&utm_content=profile&utm_medium=member_android" class="text-white mx-2"><i class="fab fa-linkedin fa-lg"></i></a>
+      <a href="#" class="text-white mx-2"><i class="fab fa-github fa-lg"></i></a>
+      <a href="#" class="text-white mx-2"><i class="fab fa-twitter fa-lg"></i></a>
+      <a href="https://www.instagram.com/nikki_swami_0820" class="text-white mx-2"><i class="fab fa-instagram fa-lg"></i></a>
+    </div>
+
+    <p class="mb-1">&copy; 2026 Nitika Swami. All rights reserved.</p>
+    <p class="small">Built with ❤️ using HTML, CSS, Bootstrap & Django</p>
+
+  </div>
+</footer>
+
+<script>
+const sections = document.querySelectorAll("section, div[id]");
+const navLinks = document.querySelectorAll(".nav-link");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    if (pageYOffset >= sectionTop - 100) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === "#" + current) {
+      link.classList.add("active");
+    }
+  });
+});
+</script>
+<script>
+const cards = document.querySelectorAll(".about-card, .project-card, .skill-card");
+
+window.addEventListener("scroll", () => {
+  cards.forEach(card => {
+    const cardTop = card.getBoundingClientRect().top;
+    if (cardTop < window.innerHeight - 100) {
+      card.style.opacity = "1";
+      card.style.transform = "translateY(0)";
+    }
+  });
+});
+</script>
+<script>
+const form = document.querySelector("form");
+
+form.addEventListener("submit", () => {
+  alert("Message sent successfully 🚀");
+});
+</script>
+<script>
+function toggleDark() {
+  document.body.classList.toggle("dark-mode");
+
+  let icon = document.getElementById("darkIcon");
+
+  if (document.body.classList.contains("dark-mode")) {
+    icon.classList.remove("fa-moon");
+    icon.classList.add("fa-sun");
+  } else {
+    icon.classList.remove("fa-sun");
+    icon.classList.add("fa-moon");
+  }
+}
+</script>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
